@@ -1,7 +1,12 @@
 package KOTLIN_BASIC
 
 fun main() {
+    val dog: Animal = Dog()
+    val cat = Cat()
 
+    if (dog is Dog) {       // 타입 체크 is
+        println("멍멍이")
+    }
 }
 
 interface Drawable {
@@ -14,7 +19,7 @@ abstract class Animal {
     }
 }
 
-class Dog : Animal(), Drawable {
+class Dog : Animal(), Drawable1 {
     override fun move() {
         println("껑충")
     }
